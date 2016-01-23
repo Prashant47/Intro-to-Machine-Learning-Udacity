@@ -29,6 +29,22 @@ bumpy_slow = [features_train[ii][1] for ii in range(0, len(features_train)) if l
 
 clf = classify(features_train, labels_train)
 
+#Prashant Code for accuracy 
+predic = clf.predict(features_test)
+print len(predic)
+print predic[1]
+print predic[2]
+
+print predic
+print labels_test
+print labels_test[1]
+print labels_test[2]
+print len(labels_test)
+intersect = [i for i, j in zip(predic, labels_test) if i == j]
+print len(intersect)
+accuracy = float(len(intersect)) / float(len(labels_test))
+print accuracy
+
 
     ### draw the decision boundary with the text points overlaid
 prettyPicture(clf, features_test, labels_test)
