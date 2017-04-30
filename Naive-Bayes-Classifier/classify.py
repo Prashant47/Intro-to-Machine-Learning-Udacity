@@ -24,3 +24,7 @@ def NBAccuracy(features_train, labels_train, features_test, labels_test):
     total = len(labels_test)
     accuracy = float(matched) / float(total)
     return accuracy
+
+    # Method 2 sklearn accuracy
+    # from sklearn.metrics import accuracy_score
+    # print accuracy_score(pred,labels_test)
