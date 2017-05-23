@@ -18,6 +18,10 @@ features_train, labels_train, features_test, labels_test = makeTerrainData()
 ### happens--fill in this function in the file 'classifyDT.py'!
 clf = classify(features_train, labels_train)
 
+### Accuracy of classifier
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(pred, labels_test)
+print "Accuracy :- " + accuracy
 
 
 #### grader code, do not modify below this line
